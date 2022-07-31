@@ -1,6 +1,6 @@
 import { createStore } from 'vuex'
 import moduleUsers from './users'
-import moduleMessages from './messages'
+import moduleMessages from './messages.js'
 
 export default createStore({
   state: {

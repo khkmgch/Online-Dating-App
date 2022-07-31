@@ -7,7 +7,7 @@
 // Components
 
 export default {
-  name: 'UserDetail',
+  name: 'ChatView',
 
   components: {
     

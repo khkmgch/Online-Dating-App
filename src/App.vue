@@ -1,30 +1,52 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <v-app>
+
+    <v-card>
+    <v-layout>
+      <!-- <v-system-bar color="deep-purple darken-3"></v-system-bar> -->
+
+      <v-app-bar
+        color="primary"
+        prominent
+      >
+        <v-app-bar-nav-icon variant="text" ></v-app-bar-nav-icon>
+
+        <v-toolbar-title>My files</v-toolbar-title>
+
+        <v-spacer></v-spacer>
+
+        
+      </v-app-bar>
+
+      <v-navigation-drawer
+        floating
+        permanent
+      >
+        <v-list
+          density="compact"
+          nav
+        >
+          <v-list-item prepend-icon="mdi-view-dashboard" title="Home" value="home" :to="{ name: 'home'}"></v-list-item>
+          <v-list-item prepend-icon="mdi-forum" title="About" value="about"></v-list-item>
+        </v-list>
+      </v-navigation-drawer>
+
+      <v-main>
+      <router-view/>
+    </v-main>
+    </v-layout>
+  </v-card>
+
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
 
-nav {
-  padding: 30px;
-}
+export default {
+  name: 'App',
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+  data: () => ({
+    //
+  }),
 }
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+</script>

@@ -26,6 +26,7 @@
           density="compact"
           nav
         >
+          <v-list-item prepend-icon="mdi-view-dashboard" title="userList" value="userList" :to="{ name: 'userList'}"></v-list-item>
           <v-list-item prepend-icon="mdi-view-dashboard" title="Home" value="home" :to="{ name: 'home'}"></v-list-item>
           <v-list-item prepend-icon="mdi-forum" title="About" value="about"></v-list-item>
         </v-list>

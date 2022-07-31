@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkonline_dating_app"]=self["webpackChunkonline_dating_app"]||[]).push([[443],{7381:function(n,a,t){t.r(a),t.d(a,{default:function(){return p}});var e=t(3396);const u={class:"about"},i=(0,e._)("h1",null,"This is an about page",-1),r=[i];function s(n,a){return(0,e.wg)(),(0,e.iD)("div",u,r)}var c=t(89);const o={},l=(0,c.Z)(o,[["render",s]]);var p=l}}]);
-//# sourceMappingURL=about.99195fc7.js.map

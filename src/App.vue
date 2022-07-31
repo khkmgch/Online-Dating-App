@@ -1,7 +1,7 @@
 <template>
   <v-app>
 
-    <v-card>
+    
     <v-layout>
       <!-- <v-system-bar color="deep-purple darken-3"></v-system-bar> -->
 
@@ -35,7 +35,7 @@
       <router-view/>
     </v-main>
     </v-layout>
-  </v-card>
+  
 
   </v-app>
 </template>

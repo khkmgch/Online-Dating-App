@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 import UserList from '../views/UserList.vue'
 import UserDetail from '../views/UserDetail.vue'
 import ChatView from '../views/ChatView.vue'
@@ -7,11 +6,6 @@ import MessageList from '../views/MessageList.vue'
 import UserMap from '../views/UserMap.vue'
 
 const routes = [
-  {
-    path: '/home',
-    name: 'home',
-    component: HomeView
-  },
   {
     path: '/',
     name: 'userList',

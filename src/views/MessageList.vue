@@ -1,8 +1,14 @@
 <template>
-    <div>
+    <v-navigation-drawer elevation="5"
+      width="400"
+      class="overflow-auto">
       <v-list v-for="(user, index) in sortedUsers" :key="index">
-        <v-list-item v-if="lastMessage(user.login.uuid) !== null" height="70" width="400" class="my-0 py-0">
-          <v-row>
+        <v-list-item 
+          v-if="lastMessage(user.login.uuid) !== null" 
+          :to="{ name: 'chat', params: { id: user.login.uuid } }"
+          height="80"  
+          class="my-0 py-0">
+          <v-row class="my-0">
             <v-col cols="2">
               <v-avatar>
                 <v-img :src="user.picture.thumbnail"></v-img>
@@ -24,7 +30,7 @@
           </v-row>
         </v-list-item>
       </v-list>
-    </div>
+    </v-navigation-drawer>
 </template>
 
 <script>
@@ -41,7 +47,7 @@ export default {
     sortedUsers(){
       let usersObj = this.$store.state.users.users
       let users = Object.values(usersObj).filter(user => this.lastMessage(user.login.uuid) !== null)
-      
+      if(users.length <= 1)return users
       return this.sortedUsersHelper(users, 0, users.length-1)
     }
   },

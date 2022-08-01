@@ -44,7 +44,7 @@
     <v-footer 
       app
       class="bg-blue-grey-lighten-5 mx-0"
-      >
+    >
       <v-row
         justify="center"
         no-gutters
@@ -57,6 +57,7 @@
             label="message"
             hide-details="auto"
             v-model="currMessage"
+            @keydown.enter="sendMessage"
           ></v-text-field>
         </v-col>
 

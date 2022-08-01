@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <div class="d-flex flex-wrap">
+    <div class="d-flex flex-wrap justify-center">
       <UserCard v-for="(user, key) in users" :key="key" :user="user"></UserCard>
     </div>
   </v-container>

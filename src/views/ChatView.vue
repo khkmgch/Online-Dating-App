@@ -34,7 +34,7 @@
             <v-card width="250" elevation="4" color="teal-accent-2" class="rounded-lg rounded-ts-0 px-4 py-3 ms-2 mt-4">
               {{ message.reply }}
             </v-card>
-            <div class="text-right text-medium-emphasis text-body-2 my-1 pe-5">{{ dateString(message) }}</div>
+            <div class="w-px250 text-right text-medium-emphasis text-body-2 my-1 pe-5">{{ dateString(message) }}</div>
           </v-col>
           <v-spacer></v-spacer>
         </v-row>
@@ -79,6 +79,9 @@
 <style scoped>
   .rotate-180{
     transform: rotate(180deg);
+  }
+  .w-px250{
+    width: 250px;
   }
 </style>
 

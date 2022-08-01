@@ -1,7 +1,7 @@
 <template>
   <v-app>
 
-      <v-app-bar prominent class="bg-blue-grey-darken-2">
+      <v-app-bar height="80" class="bg-blue-grey-darken-2">
         <v-icon class="me-3">handshake</v-icon>
 
         <v-toolbar-title>Online Dating App</v-toolbar-title>
@@ -10,7 +10,7 @@
         
       </v-app-bar>
 
-      <v-navigation-drawer floating permanent elevation="5">
+      <v-navigation-drawer floating permanent elevation="5" width="300">
         <v-list density="compact" nav>
           <v-list-item prepend-icon="dashboard" title="userList" value="userList" :to="{ name: 'userList'}"></v-list-item>
           <v-list-item prepend-icon="chat" title="MessageList" value="messageList" :to="{ name: 'messageList'}"></v-list-item>

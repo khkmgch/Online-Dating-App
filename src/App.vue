@@ -1,8 +1,6 @@
 <template>
   <v-app>
 
-    <v-layout>
-
       <v-app-bar prominent class="bg-blue-grey-darken-2">
         <v-icon class="me-3">handshake</v-icon>
 
@@ -23,7 +21,6 @@
       <v-main>
         <router-view/>
       </v-main>
-    </v-layout>
   
   </v-app>
 </template>

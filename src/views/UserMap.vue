@@ -1,34 +1,36 @@
 <template>
-  <v-container style="height: 600px; width: 1200px;" class="d-flex justify-center align-center">
-      <LMap
-        :center="mapCenter"
-        :zoom="3"
-      >
-        <LTileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        ></LTileLayer>
-        <LControlLayers />
+  <v-container class="d-flex justify-center align-center">
+    <div v-if="users !== undefined" style="height: 700px; width: 90%;" class="mt-5 pt-5">
+        <LMap
+          :center="mapCenter"
+          :zoom="3"
+        >
+          <LTileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          ></LTileLayer>
+          <LControlLayers />
       
-        <div v-for="(user, key) in users" :key="key">
-          <LMarker
-            :lat-lng="[latitude(user), longitude(user)]">
-            <LPopup>
-              <div class="d-flex justify-center">
-                <v-card 
-                  elevation="3"
-                  width="50"
-                  :to="{ name: 'userDetail', params: { id: user.login.uuid } }">
-                  <v-img
-                    :src="user.picture.thumbnail"
-                    height="50"
-                    contain></v-img>
-                </v-card>
-              </div>
-              <div>{{ user.name.first + " " + user.name.last }}</div>
-            </LPopup>
-          </LMarker>
-        </div>
-      </LMap>
+          <div v-for="(user, key) in users" :key="key">
+            <LMarker
+              :lat-lng="[latitude(user), longitude(user)]">
+              <LPopup>
+                <div class="d-flex justify-center">
+                  <v-card 
+                    elevation="3"
+                    width="50"
+                    :to="{ name: 'userDetail', params: { id: user.login.uuid } }">
+                    <v-img
+                      :src="user.picture.thumbnail"
+                      height="50"
+                      contain></v-img>
+                  </v-card>
+                </div>
+                <div>{{ user.name.first + " " + user.name.last }}</div>
+              </LPopup>
+            </LMarker>
+          </div>
+        </LMap>
+    </div>
   </v-container>
 </template>
 

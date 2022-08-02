@@ -1,6 +1,6 @@
 <template>
-    <v-card width="250" elevation="5" outlined class="ma-5">
-        <v-img height="200" :src="user.picture.thumbnail" cover></v-img>
+    <v-card width="300" elevation="5" outlined class="ma-5">
+        <v-img height="250" :src="user.picture.thumbnail" cover></v-img>
 
         <v-card-title>
             {{ user.name.first + " " + user.name.last }}
